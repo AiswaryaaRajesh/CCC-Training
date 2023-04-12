@@ -43,3 +43,16 @@ else
     printf("Yes")
 }
 
+#interchange first and laast digit of a number by usinf no loop, no string logic, no recursion. Consider the number only as an integer
+#logic Algo
+p=floor(log base10 n)
+l=n/(pow(10,p))
+n=n-u+l-l*pow(10,p)+u*pow(10,p)
+  
+  
+#Analyze situation
+A()
+  for (i=1 to n)
+    for(k=1 to n/2)
+      printf("#");
+
