@@ -15,7 +15,7 @@ for(i=1,j=10;i<10,j>8;i++,j--)
 #switch case.....if it does not encounter a break statement, it will keep on executing statements Eg. if ch=2, it will execute case 2 and the next cases 
 # till it encounters break or switch casse ends
   
-#check if prime or not....n between 1 and 10^5
+#check if prime or not
 int n,i;
 scanf("%d",&n);
 if(n==1)
@@ -42,3 +42,4 @@ else
     }
     printf("Yes")
 }
+
