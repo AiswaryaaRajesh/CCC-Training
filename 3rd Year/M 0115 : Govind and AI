@@ -1,0 +1,23 @@
+def find_min_X(A, B, C, K):
+    left, right = 0, K
+    result = K + 1  # Initialize result with a value greater than K
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if A * mid * mid + B * mid + C >= K:
+            result = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+
+    return result
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    A, B, C, K = map(int, input().split())
+    result = find_min_X(A, B, C, K)
+    print(result)
