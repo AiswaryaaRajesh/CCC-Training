@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define MAXV 51
+int main(){
+	int T,len;
+	char s[MAXV];
+	scanf("%d",&T);
+	while(T--){
+		scanf("%s",s);
+		len = strlen(s);
+		int i;
+		int d_count = 0, u_count = 0;
+		int cur_count_d = 0, cur_count_u = 0;
+		for( i = 0;i<len;i++){
+			if(s[i] =='U'){
+				if(cur_count_d) d_count++;
+				cur_count_d = 0;
+				cur_count_u++;
+			} else {
+				if(cur_count_u) u_count++;
+				cur_count_u = 0;
+				cur_count_d++;
+			}
+		}
+		if(s[i-1] == 'U') u_count++;
+		else d_count++;
+		
+		//printf("d_count = %d, u_count = %d\n",d_count, u_count);
+		int ans = min(d_count, u_count);
+		printf("%d\n",ans);
+		
+	}
+	return 0;
+}
