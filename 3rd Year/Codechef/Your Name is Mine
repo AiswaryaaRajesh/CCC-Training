@@ -1,0 +1,20 @@
+def can_marry(m, w):
+    i = j = 0
+
+    while i < len(m) and j < len(w):
+        if m[i] == w[j]:
+            i += 1
+        j += 1
+
+    return i == len(m)
+
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+    m, w = input().split()
+    if can_marry(m, w) or can_marry(w, m):
+        print("YES")
+    else:
+        print("NO")
