@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int numberOfTestCases, n, freq[101] = {0}, a, maxFreq;
+    cin>>numberOfTestCases;
+    while(numberOfTestCases--) {
+        cin>>n;
+        maxFreq = 0;
+        for(int i=0; i<n; i++) {
+            cin>>a;
+            freq[a]++;
+        }
+        for(int i=1; i<=100; i++) {
+            maxFreq = max(maxFreq, freq[i]);
+            freq[i] = 0;
+        }
+        cout<<n-maxFreq<<endl;
+    }
+}
